@@ -3,16 +3,40 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AA36287277BDABE61E27137 /* Pods_DoorDash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6428C1A40090508A19BD045B /* Pods_DoorDash.framework */; };
+		8C22E7593C947BA7F4F5F0BF /* Pods_DoorDashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6A1CBC98D877DC0067086F /* Pods_DoorDashTests.framework */; };
 		BAE19FE322F27D4200F44AAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE19FE222F27D4200F44AAE /* AppDelegate.swift */; };
-		BAE19FE522F27D4200F44AAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE19FE422F27D4200F44AAE /* ViewController.swift */; };
 		BAE19FE822F27D4200F44AAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE19FE622F27D4200F44AAE /* Main.storyboard */; };
 		BAE19FEA22F27D4400F44AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE19FE922F27D4400F44AAE /* Assets.xcassets */; };
 		BAE19FED22F27D4400F44AAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE19FEB22F27D4400F44AAE /* LaunchScreen.storyboard */; };
 		BAE19FF822F27D4500F44AAE /* DoorDashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE19FF722F27D4500F44AAE /* DoorDashTests.swift */; };
+		BAE1A00D22F27FC400F44AAE /* QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A00822F27FC400F44AAE /* QueryParameters.swift */; };
+		BAE1A00E22F27FC400F44AAE /* Body.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A00922F27FC400F44AAE /* Body.swift */; };
+		BAE1A00F22F27FC400F44AAE /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A00A22F27FC400F44AAE /* Header.swift */; };
+		BAE1A01022F27FC400F44AAE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A00B22F27FC400F44AAE /* Endpoint.swift */; };
+		BAE1A01122F27FC400F44AAE /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A00C22F27FC400F44AAE /* HTTPMethod.swift */; };
+		BAE1A04122F2841A00F44AAE /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A04022F2841A00F44AAE /* RestaurantTableViewController.swift */; };
+		BAE1A04322F285B500F44AAE /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A04222F285B500F44AAE /* RestaurantCell.swift */; };
+		BAE1A04622F2865500F44AAE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A04522F2865500F44AAE /* MapViewController.swift */; };
+		BAE1A04822F286C700F44AAE /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A04722F286C700F44AAE /* MapView.swift */; };
+		BAE1A06622F28E4600F44AAE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A06222F28E4600F44AAE /* BaseViewController.swift */; };
+		BAE1A06722F28E4600F44AAE /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A06322F28E4600F44AAE /* BaseView.swift */; };
+		BAE1A07522F28EC500F44AAE /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A07422F28EC500F44AAE /* ImageName.swift */; };
+		BAE1A07722F2916F00F44AAE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A07622F2916F00F44AAE /* Coordinator.swift */; };
+		BAE1A07922F291E700F44AAE /* LocatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A07822F291E700F44AAE /* LocatedTabBarController.swift */; };
+		BAE1A07B22F2926900F44AAE /* ExploreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A07A22F2926900F44AAE /* ExploreCoordinator.swift */; };
+		BAE1A07D22F2973A00F44AAE /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A07C22F2973A00F44AAE /* BaseTableViewCell.swift */; };
+		BAE1A07F22F29B5E00F44AAE /* DoorDash_v1_RestaurantsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A07E22F29B5E00F44AAE /* DoorDash_v1_RestaurantsEndpoint.swift */; };
+		BAE1A08122F29B9100F44AAE /* DoorDash.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A08022F29B9100F44AAE /* DoorDash.swift */; };
+		BAE1A08422F29F4500F44AAE /* DoorDash_v1_RestaurantsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A08322F29F4500F44AAE /* DoorDash_v1_RestaurantsProvider.swift */; };
+		BAE1A08622F29FE900F44AAE /* DoorDash_v1_RestaurantsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A08522F29FE900F44AAE /* DoorDash_v1_RestaurantsService.swift */; };
+		BAE1A08822F2A26200F44AAE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A08722F2A26200F44AAE /* Network.swift */; };
+		BAE1A08C22F2A6F000F44AAE /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A08B22F2A6F000F44AAE /* Coordinate.swift */; };
+		BAE1A08F22F2AF4D00F44AAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A08E22F2AF4D00F44AAE /* Restaurant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A9F8E26AB41AB731F6C7436 /* Pods-DoorDash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorDash.debug.xcconfig"; path = "Target Support Files/Pods-DoorDash/Pods-DoorDash.debug.xcconfig"; sourceTree = "<group>"; };
+		6428C1A40090508A19BD045B /* Pods_DoorDash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoorDash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		717C6379F37212E1D4423A9F /* Pods-DoorDashTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorDashTests.release.xcconfig"; path = "Target Support Files/Pods-DoorDashTests/Pods-DoorDashTests.release.xcconfig"; sourceTree = "<group>"; };
+		81D3D565E4BC4EACFF24190F /* Pods-DoorDash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorDash.release.xcconfig"; path = "Target Support Files/Pods-DoorDash/Pods-DoorDash.release.xcconfig"; sourceTree = "<group>"; };
+		B80A85646A099C794C0FC49E /* Pods-DoorDashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorDashTests.debug.xcconfig"; path = "Target Support Files/Pods-DoorDashTests/Pods-DoorDashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BAE19FDF22F27D4200F44AAE /* DoorDash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorDash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE19FE222F27D4200F44AAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAE19FE422F27D4200F44AAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BAE19FE722F27D4200F44AAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAE19FE922F27D4400F44AAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAE19FEC22F27D4400F44AAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +64,30 @@
 		BAE19FF322F27D4500F44AAE /* DoorDashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoorDashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE19FF722F27D4500F44AAE /* DoorDashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDashTests.swift; sourceTree = "<group>"; };
 		BAE19FF922F27D4500F44AAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE1A00822F27FC400F44AAE /* QueryParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryParameters.swift; sourceTree = "<group>"; };
+		BAE1A00922F27FC400F44AAE /* Body.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Body.swift; sourceTree = "<group>"; };
+		BAE1A00A22F27FC400F44AAE /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		BAE1A00B22F27FC400F44AAE /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		BAE1A00C22F27FC400F44AAE /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		BAE1A04022F2841A00F44AAE /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		BAE1A04222F285B500F44AAE /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		BAE1A04522F2865500F44AAE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BAE1A04722F286C700F44AAE /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		BAE1A06222F28E4600F44AAE /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BAE1A06322F28E4600F44AAE /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		BAE1A07422F28EC500F44AAE /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
+		BAE1A07622F2916F00F44AAE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BAE1A07822F291E700F44AAE /* LocatedTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatedTabBarController.swift; sourceTree = "<group>"; };
+		BAE1A07A22F2926900F44AAE /* ExploreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCoordinator.swift; sourceTree = "<group>"; };
+		BAE1A07C22F2973A00F44AAE /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		BAE1A07E22F29B5E00F44AAE /* DoorDash_v1_RestaurantsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDash_v1_RestaurantsEndpoint.swift; sourceTree = "<group>"; };
+		BAE1A08022F29B9100F44AAE /* DoorDash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDash.swift; sourceTree = "<group>"; };
+		BAE1A08322F29F4500F44AAE /* DoorDash_v1_RestaurantsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDash_v1_RestaurantsProvider.swift; sourceTree = "<group>"; };
+		BAE1A08522F29FE900F44AAE /* DoorDash_v1_RestaurantsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDash_v1_RestaurantsService.swift; sourceTree = "<group>"; };
+		BAE1A08722F2A26200F44AAE /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		BAE1A08B22F2A6F000F44AAE /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		BAE1A08E22F2AF4D00F44AAE /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		DD6A1CBC98D877DC0067086F /* Pods_DoorDashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoorDashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA36287277BDABE61E27137 /* Pods_DoorDash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,17 +103,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C22E7593C947BA7F4F5F0BF /* Pods_DoorDashTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C1A8FF44AC2975EA0351347 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6428C1A40090508A19BD045B /* Pods_DoorDash.framework */,
+				DD6A1CBC98D877DC0067086F /* Pods_DoorDashTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BAE19FD622F27D4200F44AAE = {
 			isa = PBXGroup;
 			children = (
-				BAE19FE122F27D4200F44AAE /* DoorDash */,
+				BAE1A00222F27DA800F44AAE /* Source */,
+				BAE1A00722F27DF300F44AAE /* Resources */,
 				BAE19FF622F27D4500F44AAE /* DoorDashTests */,
+				1C1A8FF44AC2975EA0351347 /* Frameworks */,
+				E291A75B2F4A23BE4AA7691C /* Pods */,
 				BAE19FE022F27D4200F44AAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,19 +140,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BAE19FE122F27D4200F44AAE /* DoorDash */ = {
-			isa = PBXGroup;
-			children = (
-				BAE19FE222F27D4200F44AAE /* AppDelegate.swift */,
-				BAE19FE422F27D4200F44AAE /* ViewController.swift */,
-				BAE19FE622F27D4200F44AAE /* Main.storyboard */,
-				BAE19FE922F27D4400F44AAE /* Assets.xcassets */,
-				BAE19FEB22F27D4400F44AAE /* LaunchScreen.storyboard */,
-				BAE19FEE22F27D4400F44AAE /* Info.plist */,
-			);
-			path = DoorDash;
-			sourceTree = "<group>";
-		};
 		BAE19FF622F27D4500F44AAE /* DoorDashTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +149,147 @@
 			path = DoorDashTests;
 			sourceTree = "<group>";
 		};
+		BAE1A00222F27DA800F44AAE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BAE19FE222F27D4200F44AAE /* AppDelegate.swift */,
+				BAE1A00322F27DAE00F44AAE /* Core */,
+				BAE1A00422F27DBA00F44AAE /* Network */,
+				BAE1A04422F2863E00F44AAE /* Map */,
+				BAE1A03F22F283BF00F44AAE /* Restaurants */,
+				BAE1A00522F27DC800F44AAE /* Supporting Files */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		BAE1A00322F27DAE00F44AAE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BAE1A06122F28E4600F44AAE /* Common */,
+				BAE1A00622F27DCD00F44AAE /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BAE1A00422F27DBA00F44AAE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BAE1A08022F29B9100F44AAE /* DoorDash.swift */,
+				BAE1A08722F2A26200F44AAE /* Network.swift */,
+				BAE1A08222F29C0C00F44AAE /* Restaurants */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BAE1A00522F27DC800F44AAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAE19FEE22F27D4400F44AAE /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAE1A00622F27DCD00F44AAE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BAE1A00922F27FC400F44AAE /* Body.swift */,
+				BAE1A00B22F27FC400F44AAE /* Endpoint.swift */,
+				BAE1A00A22F27FC400F44AAE /* Header.swift */,
+				BAE1A00C22F27FC400F44AAE /* HTTPMethod.swift */,
+				BAE1A00822F27FC400F44AAE /* QueryParameters.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BAE1A00722F27DF300F44AAE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BAE19FE922F27D4400F44AAE /* Assets.xcassets */,
+				BAE19FEB22F27D4400F44AAE /* LaunchScreen.storyboard */,
+				BAE19FE622F27D4200F44AAE /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BAE1A03F22F283BF00F44AAE /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				BAE1A07A22F2926900F44AAE /* ExploreCoordinator.swift */,
+				BAE1A07822F291E700F44AAE /* LocatedTabBarController.swift */,
+				BAE1A04022F2841A00F44AAE /* RestaurantTableViewController.swift */,
+				BAE1A04222F285B500F44AAE /* RestaurantCell.swift */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		BAE1A04422F2863E00F44AAE /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BAE1A08D22F2A70D00F44AAE /* Model */,
+				BAE1A04522F2865500F44AAE /* MapViewController.swift */,
+				BAE1A04722F286C700F44AAE /* MapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		BAE1A06122F28E4600F44AAE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BAE1A06922F28E5500F44AAE /* BaseView */,
+				BAE1A07622F2916F00F44AAE /* Coordinator.swift */,
+				BAE1A07422F28EC500F44AAE /* ImageName.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BAE1A06922F28E5500F44AAE /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				BAE1A06222F28E4600F44AAE /* BaseViewController.swift */,
+				BAE1A06322F28E4600F44AAE /* BaseView.swift */,
+				BAE1A07C22F2973A00F44AAE /* BaseTableViewCell.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		BAE1A08222F29C0C00F44AAE /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				BAE1A09022F2AF5100F44AAE /* Model */,
+				BAE1A07E22F29B5E00F44AAE /* DoorDash_v1_RestaurantsEndpoint.swift */,
+				BAE1A08322F29F4500F44AAE /* DoorDash_v1_RestaurantsProvider.swift */,
+				BAE1A08522F29FE900F44AAE /* DoorDash_v1_RestaurantsService.swift */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		BAE1A08D22F2A70D00F44AAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAE1A08B22F2A6F000F44AAE /* Coordinate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BAE1A09022F2AF5100F44AAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAE1A08E22F2AF4D00F44AAE /* Restaurant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E291A75B2F4A23BE4AA7691C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A9F8E26AB41AB731F6C7436 /* Pods-DoorDash.debug.xcconfig */,
+				81D3D565E4BC4EACFF24190F /* Pods-DoorDash.release.xcconfig */,
+				B80A85646A099C794C0FC49E /* Pods-DoorDashTests.debug.xcconfig */,
+				717C6379F37212E1D4423A9F /* Pods-DoorDashTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +297,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAE19FFC22F27D4500F44AAE /* Build configuration list for PBXNativeTarget "DoorDash" */;
 			buildPhases = (
+				BF8B47C6B9E0F1DE68E51229 /* [CP] Check Pods Manifest.lock */,
 				BAE19FDB22F27D4200F44AAE /* Sources */,
 				BAE19FDC22F27D4200F44AAE /* Frameworks */,
 				BAE19FDD22F27D4200F44AAE /* Resources */,
+				0861C197619C454E29FB211E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +316,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAE19FFF22F27D4500F44AAE /* Build configuration list for PBXNativeTarget "DoorDashTests" */;
 			buildPhases = (
+				7A26BCE4FE96A7C2F4575AD0 /* [CP] Check Pods Manifest.lock */,
 				BAE19FEF22F27D4500F44AAE /* Sources */,
 				BAE19FF022F27D4500F44AAE /* Frameworks */,
 				BAE19FF122F27D4500F44AAE /* Resources */,
@@ -192,13 +389,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0861C197619C454E29FB211E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoorDash/Pods-DoorDash-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoorDash/Pods-DoorDash-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoorDash/Pods-DoorDash-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A26BCE4FE96A7C2F4575AD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoorDashTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF8B47C6B9E0F1DE68E51229 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoorDash-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BAE19FDB22F27D4200F44AAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE19FE522F27D4200F44AAE /* ViewController.swift in Sources */,
+				BAE1A08422F29F4500F44AAE /* DoorDash_v1_RestaurantsProvider.swift in Sources */,
+				BAE1A00F22F27FC400F44AAE /* Header.swift in Sources */,
+				BAE1A06722F28E4600F44AAE /* BaseView.swift in Sources */,
+				BAE1A00E22F27FC400F44AAE /* Body.swift in Sources */,
+				BAE1A08122F29B9100F44AAE /* DoorDash.swift in Sources */,
+				BAE1A04122F2841A00F44AAE /* RestaurantTableViewController.swift in Sources */,
+				BAE1A07522F28EC500F44AAE /* ImageName.swift in Sources */,
+				BAE1A01122F27FC400F44AAE /* HTTPMethod.swift in Sources */,
+				BAE1A07B22F2926900F44AAE /* ExploreCoordinator.swift in Sources */,
+				BAE1A07722F2916F00F44AAE /* Coordinator.swift in Sources */,
+				BAE1A08C22F2A6F000F44AAE /* Coordinate.swift in Sources */,
+				BAE1A04822F286C700F44AAE /* MapView.swift in Sources */,
+				BAE1A06622F28E4600F44AAE /* BaseViewController.swift in Sources */,
+				BAE1A00D22F27FC400F44AAE /* QueryParameters.swift in Sources */,
+				BAE1A08622F29FE900F44AAE /* DoorDash_v1_RestaurantsService.swift in Sources */,
+				BAE1A07F22F29B5E00F44AAE /* DoorDash_v1_RestaurantsEndpoint.swift in Sources */,
+				BAE1A07922F291E700F44AAE /* LocatedTabBarController.swift in Sources */,
+				BAE1A08822F2A26200F44AAE /* Network.swift in Sources */,
+				BAE1A07D22F2973A00F44AAE /* BaseTableViewCell.swift in Sources */,
 				BAE19FE322F27D4200F44AAE /* AppDelegate.swift in Sources */,
+				BAE1A08F22F2AF4D00F44AAE /* Restaurant.swift in Sources */,
+				BAE1A04622F2865500F44AAE /* MapViewController.swift in Sources */,
+				BAE1A01022F27FC400F44AAE /* Endpoint.swift in Sources */,
+				BAE1A04322F285B500F44AAE /* RestaurantCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,40 +641,47 @@
 		};
 		BAE19FFD22F27D4500F44AAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9F8E26AB41AB731F6C7436 /* Pods-DoorDash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DoorDash/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lammorris.DoorDash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		BAE19FFE22F27D4500F44AAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81D3D565E4BC4EACFF24190F /* Pods-DoorDash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DoorDash/Info.plist;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lammorris.DoorDash;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		BAE1A00022F27D4500F44AAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B80A85646A099C794C0FC49E /* Pods-DoorDashTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -412,6 +702,7 @@
 		};
 		BAE1A00122F27D4500F44AAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 717C6379F37212E1D4423A9F /* Pods-DoorDashTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
