@@ -40,6 +40,7 @@
 		BAE1A09222F2BDC400F44AAE /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A09122F2BDC400F44AAE /* UILabel+.swift */; };
 		BAE1A09522F2C15300F44AAE /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A09422F2C15300F44AAE /* Business.swift */; };
 		BAE1A09722F2C47900F44AAE /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A09622F2C47900F44AAE /* UIColor+.swift */; };
+		BAE1A09922F2D76C00F44AAE /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A09822F2D76C00F44AAE /* FavoritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		BAE1A09122F2BDC400F44AAE /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		BAE1A09422F2C15300F44AAE /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		BAE1A09622F2C47900F44AAE /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		BAE1A09822F2D76C00F44AAE /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		DD6A1CBC98D877DC0067086F /* Pods_DoorDashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoorDashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -221,9 +223,10 @@
 			isa = PBXGroup;
 			children = (
 				BAE1A07A22F2926900F44AAE /* ExploreCoordinator.swift */,
+				BAE1A09822F2D76C00F44AAE /* FavoritesViewController.swift */,
 				BAE1A07822F291E700F44AAE /* LocatedTabBarController.swift */,
-				BAE1A04022F2841A00F44AAE /* RestaurantTableViewController.swift */,
 				BAE1A04222F285B500F44AAE /* RestaurantCell.swift */,
+				BAE1A04022F2841A00F44AAE /* RestaurantTableViewController.swift */,
 			);
 			path = Restaurants;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				BAE1A01122F27FC400F44AAE /* HTTPMethod.swift in Sources */,
 				BAE1A07B22F2926900F44AAE /* ExploreCoordinator.swift in Sources */,
 				BAE1A07722F2916F00F44AAE /* Coordinator.swift in Sources */,
+				BAE1A09922F2D76C00F44AAE /* FavoritesViewController.swift in Sources */,
 				BAE1A08C22F2A6F000F44AAE /* Coordinate.swift in Sources */,
 				BAE1A04822F286C700F44AAE /* MapView.swift in Sources */,
 				BAE1A06622F28E4600F44AAE /* BaseViewController.swift in Sources */,

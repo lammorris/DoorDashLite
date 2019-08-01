@@ -40,10 +40,11 @@ final class ExploreCoordinator: Coordinator {
 
             let tabBarVC = LocatedTabBarController()
             let restaurantTableVC = RestaurantTableViewController(restaurants: restaurants)
+            let favoritesVC = FavoritesViewController()
 
             tabBarVC.navigationDelegate = strongSelf
 
-            tabBarVC.setViewControllers([restaurantTableVC], animated: true)
+            tabBarVC.setViewControllers([restaurantTableVC, favoritesVC], animated: true)
             strongSelf.navigationController.pushViewController(tabBarVC, animated: true)
         }
     }
