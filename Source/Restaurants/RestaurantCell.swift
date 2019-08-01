@@ -15,7 +15,7 @@ final class RestaurantCell: BaseTableViewCell {
         static let margin: CGFloat = 20
         static let detailSpacing: CGFloat = 4
         static let imageHeight: CGFloat = 75
-        static let imageWidth: CGFloat = UIScreen.main.bounds.width / 3
+        static let imageWidth: CGFloat = UIScreen.main.bounds.width / 4
     }
 
     // MARK: - Properties
@@ -48,11 +48,14 @@ final class RestaurantCell: BaseTableViewCell {
         }()
 
         titleLabel = {
-            return UILabel()
+            return UILabel(theme: .title)
         }()
 
         typeLabel = {
-            return UILabel()
+            let label = UILabel(theme: .detail)
+            label.styleWith(color: .lightGray)
+
+            return label
         }()
 
         deliveryStackView = {
@@ -63,12 +66,15 @@ final class RestaurantCell: BaseTableViewCell {
         }()
 
         deliveryChargeLabel = {
-            return UILabel()
+            let label = UILabel()
+            label.styleWith(color: .darkGray)
+
+            return label
         }()
 
         deliveryTimeLabel = {
             let label = UILabel()
-            label.textAlignment = .right
+            label.styleWith(alignment: .right, color: .darkGray)
 
             return label
         }()

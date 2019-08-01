@@ -26,8 +26,3 @@ struct Restaurant: Codable {
 
     }
 }
-
-struct Business: Codable {
-    let id: Int
-    let name: String
-}

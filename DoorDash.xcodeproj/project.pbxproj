@@ -37,6 +37,9 @@
 		BAE1A08822F2A26200F44AAE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A08722F2A26200F44AAE /* Network.swift */; };
 		BAE1A08C22F2A6F000F44AAE /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A08B22F2A6F000F44AAE /* Coordinate.swift */; };
 		BAE1A08F22F2AF4D00F44AAE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A08E22F2AF4D00F44AAE /* Restaurant.swift */; };
+		BAE1A09222F2BDC400F44AAE /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A09122F2BDC400F44AAE /* UILabel+.swift */; };
+		BAE1A09522F2C15300F44AAE /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A09422F2C15300F44AAE /* Business.swift */; };
+		BAE1A09722F2C47900F44AAE /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE1A09622F2C47900F44AAE /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,9 @@
 		BAE1A08722F2A26200F44AAE /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		BAE1A08B22F2A6F000F44AAE /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		BAE1A08E22F2AF4D00F44AAE /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		BAE1A09122F2BDC400F44AAE /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		BAE1A09422F2C15300F44AAE /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		BAE1A09622F2C47900F44AAE /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		DD6A1CBC98D877DC0067086F /* Pods_DoorDashTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoorDashTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -235,6 +241,7 @@
 		BAE1A06122F28E4600F44AAE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BAE1A09322F2BDC900F44AAE /* Extensions */,
 				BAE1A06922F28E5500F44AAE /* BaseView */,
 				BAE1A07622F2916F00F44AAE /* Coordinator.swift */,
 				BAE1A07422F28EC500F44AAE /* ImageName.swift */,
@@ -275,8 +282,18 @@
 			isa = PBXGroup;
 			children = (
 				BAE1A08E22F2AF4D00F44AAE /* Restaurant.swift */,
+				BAE1A09422F2C15300F44AAE /* Business.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BAE1A09322F2BDC900F44AAE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAE1A09122F2BDC400F44AAE /* UILabel+.swift */,
+				BAE1A09622F2C47900F44AAE /* UIColor+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E291A75B2F4A23BE4AA7691C /* Pods */ = {
@@ -471,10 +488,13 @@
 				BAE1A08C22F2A6F000F44AAE /* Coordinate.swift in Sources */,
 				BAE1A04822F286C700F44AAE /* MapView.swift in Sources */,
 				BAE1A06622F28E4600F44AAE /* BaseViewController.swift in Sources */,
+				BAE1A09522F2C15300F44AAE /* Business.swift in Sources */,
 				BAE1A00D22F27FC400F44AAE /* QueryParameters.swift in Sources */,
 				BAE1A08622F29FE900F44AAE /* DoorDash_v1_RestaurantsService.swift in Sources */,
 				BAE1A07F22F29B5E00F44AAE /* DoorDash_v1_RestaurantsEndpoint.swift in Sources */,
+				BAE1A09722F2C47900F44AAE /* UIColor+.swift in Sources */,
 				BAE1A07922F291E700F44AAE /* LocatedTabBarController.swift in Sources */,
+				BAE1A09222F2BDC400F44AAE /* UILabel+.swift in Sources */,
 				BAE1A08822F2A26200F44AAE /* Network.swift in Sources */,
 				BAE1A07D22F2973A00F44AAE /* BaseTableViewCell.swift in Sources */,
 				BAE19FE322F27D4200F44AAE /* AppDelegate.swift in Sources */,

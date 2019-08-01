@@ -39,8 +39,10 @@ class LocatedTabBarController: UITabBarController {
 
     // MARK: - Methods
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.doorDashRed]
     }
 
     // MARK: - Actions
