@@ -7,19 +7,51 @@
 //
 
 import UIKit
+import MapKit
 
 final class MapView: BaseView {
 
+    private struct Layout {
+        static let infoHeight: CGFloat = 50
+    }
+
     // MARK: - Properties
+
+    private let map: MKMapView
+    private let addressLabel: UILabel
+    private let infoStack: UIStackView
 
     let confirmationButton: UIButton
 
     // MARK: - Initialization
 
     override init(frame: CGRect) {
+        map = {
+            let map = MKMapView(frame: .zero)
+            map.showsUserLocation = true
+            map.userTrackingMode = .follow
+
+            return map
+        }()
+
+        addressLabel = {
+            let label = UILabel(theme: .detail)
+            label.styleWith(alignment: .center, color: .lightGray)
+
+            return label
+        }()
+
+        infoStack = {
+            let stackView = UIStackView()
+            stackView.axis = .vertical
+
+            return stackView
+        }()
+
         confirmationButton = {
             let button = UIButton()
-            button.setTitleColor(.black, for: .normal)
+            button.setTitleColor(.white, for: .normal)
+            button.backgroundColor = UIColor.doorDashRed
             button.setTitle("Confirm", for: .normal)
 
             return button
@@ -32,26 +64,42 @@ final class MapView: BaseView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - Methods
 
     override func constructSubviewHierarchy() {
         super.constructSubviewHierarchy()
 
-        addSubview(confirmationButton)
+        infoStack.addArrangedSubview(addressLabel)
+        infoStack.addArrangedSubview(confirmationButton)
+
+        addSubview(map)
+        addSubview(infoStack)
     }
 
     override func constructSubviewLayoutConstraints() {
         super.constructSubviewLayoutConstraints()
 
-        confirmationButton.translatesAutoresizingMaskIntoConstraints = false
+        map.translatesAutoresizingMaskIntoConstraints = false
+        infoStack.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            confirmationButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            confirmationButton.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            confirmationButton.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            confirmationButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            map.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            map.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            map.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+
+            addressLabel.heightAnchor.constraint(equalToConstant: Layout.infoHeight),
+            confirmationButton.heightAnchor.constraint(equalToConstant: Layout.infoHeight),
+
+            infoStack.topAnchor.constraint(equalTo: map.bottomAnchor),
+            infoStack.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            infoStack.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            infoStack.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
         ])
     }
 
-    // MARK: - Private Methods
+    // MARK: - Methods
+
+    func update(region: MKCoordinateRegion, placemark: CLPlacemark) {
+        map.setRegion(region, animated: true)
+        addressLabel.text = [placemark.subThoroughfare, placemark.thoroughfare, placemark.locality].compactMap({ $0 }).joined(separator: " ")
+    }
 }
