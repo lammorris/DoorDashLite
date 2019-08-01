@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class RestaurantCell: BaseTableViewCell {
 
     private struct Layout {
         static let margin: CGFloat = 20
+        static let detailSpacing: CGFloat = 4
+        static let imageHeight: CGFloat = 75
+        static let imageWidth: CGFloat = UIScreen.main.bounds.width / 3
     }
 
     // MARK: - Properties
@@ -28,11 +32,19 @@ final class RestaurantCell: BaseTableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         imgView = {
-            return UIImageView()
+            let imageView = UIImageView()
+            imageView.contentMode = .scaleAspectFit
+
+            return imageView
         }()
 
         detailStackView = {
-            return UIStackView()
+            let stackView = UIStackView()
+            stackView.axis = .vertical
+            stackView.spacing = Layout.detailSpacing
+            stackView.distribution = .equalSpacing
+
+            return stackView
         }()
 
         titleLabel = {
@@ -44,7 +56,10 @@ final class RestaurantCell: BaseTableViewCell {
         }()
 
         deliveryStackView = {
-            return UIStackView()
+            let stackView = UIStackView()
+            stackView.distribution = .fillProportionally
+
+            return stackView
         }()
 
         deliveryChargeLabel = {
@@ -52,7 +67,10 @@ final class RestaurantCell: BaseTableViewCell {
         }()
 
         deliveryTimeLabel = {
-            return UILabel()
+            let label = UILabel()
+            label.textAlignment = .right
+
+            return label
         }()
 
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -61,8 +79,6 @@ final class RestaurantCell: BaseTableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    // MARK: - Methods
 
     override func constructSubviewHierarchy() {
         super.constructSubviewHierarchy()
@@ -85,14 +101,26 @@ final class RestaurantCell: BaseTableViewCell {
         detailStackView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            imgView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Layout.margin),
-            imgView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: Layout.margin),
-            imgView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: Layout.margin),
+            imgView.topAnchor.constraint(equalTo: topAnchor, constant: Layout.margin),
+            imgView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Layout.margin),
+            imgView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Layout.margin),
+            imgView.widthAnchor.constraint(equalToConstant: Layout.imageWidth),
+            imgView.heightAnchor.constraint(equalToConstant: Layout.imageHeight),
 
-            detailStackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Layout.margin),
+            detailStackView.topAnchor.constraint(equalTo: topAnchor, constant: Layout.margin),
             detailStackView.leadingAnchor.constraint(equalTo: imgView.trailingAnchor, constant: Layout.margin),
-            detailStackView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: Layout.margin),
-            detailStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: Layout.margin),
+            detailStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Layout.margin),
+            detailStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Layout.margin),
         ])
+    }
+
+    // MARK: - Methods
+
+    func update(restaurant: Restaurant) {
+        imgView.sd_setImage(with: restaurant.coverImage)
+        titleLabel.text = restaurant.business.name
+        typeLabel.text = restaurant.description
+        deliveryChargeLabel.text = restaurant.deliveryFee == 0 ? "Free Delivery" : "$ \(restaurant.deliveryFee.description) delivery"
+        deliveryTimeLabel.text = "\(restaurant.deliveryTime ?? 0) min"
     }
 }

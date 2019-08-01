@@ -18,12 +18,15 @@ final class RestaurantTableViewController: UITableViewController {
     // MARK: - Properties
 
     private let reuseIdentifier = "RestaurantCell"
+    private let restaurants: [Restaurant]
 
     weak var delegate: RestaurantTableViewControllerDelegate?
 
     // MARK: - Initialization
 
-    init() {
+    init(restaurants: [Restaurant]) {
+        self.restaurants = restaurants
+
         super.init(nibName: nil, bundle: nil)
 
         tableView.register(RestaurantCell.self, forCellReuseIdentifier: reuseIdentifier)
@@ -42,11 +45,13 @@ final class RestaurantTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return restaurants.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! RestaurantCell
+
+        cell.update(restaurant: restaurants[indexPath.row])
 
         return cell
     }

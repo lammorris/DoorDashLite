@@ -9,20 +9,25 @@
 import Foundation
 
 struct Restaurant: Codable {
-    let deliveryTime: String
+    let business: Business
     let coverImage: URL
+    let deliveryFee: Double
+    let deliveryTime: Int?
     let description: String
     let id: Int
-    let deliveryFee: Double
-    let name: String
 
     enum CodingKeys: String, CodingKey {
-        case deliveryTime = "asap_time"
+        case business
         case coverImage = "cover_img_url"
+        case deliveryFee = "delivery_fee"
+        case deliveryTime = "asap_time"
         case description
         case id
-        case deliveryFee = "delivery_fee"
-        case name
 
     }
+}
+
+struct Business: Codable {
+    let id: Int
+    let name: String
 }

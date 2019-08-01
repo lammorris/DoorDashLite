@@ -16,6 +16,7 @@ class BaseTableViewCell: UITableViewCell, Constructable {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         backgroundColor = .white
+        selectionStyle = .none
 
         construct()
     }

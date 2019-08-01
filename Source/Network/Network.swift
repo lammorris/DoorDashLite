@@ -13,6 +13,7 @@ class Network {
     static let domain = "https://api.doordash.com"
 
     let session = URLSession(configuration: URLSessionConfiguration.default)
+    let decoder = JSONDecoder()
 
     let restaurantService = DoorDash.Restaurants_v1.RestaurantsService()
 }

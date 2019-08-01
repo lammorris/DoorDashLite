@@ -19,6 +19,7 @@ final class ExploreCoordinator: Coordinator {
 
     private let navigationController: UINavigationController
     private let coordinate: Coordinate
+    private var restaurants: [Restaurant]?
 
     weak var delegate: ExploreCoordinatorDelegate?
 
@@ -32,11 +33,13 @@ final class ExploreCoordinator: Coordinator {
     // MARK: - Methods
 
     func start() {
-        getRestaurants(longitude: coordinate.longitude, latitude: coordinate.latitude) { [weak self] in
+        getRestaurants(longitude: coordinate.longitude, latitude: coordinate.latitude) { [weak self] restaurants in
             guard let strongSelf = self else { return }
 
+            strongSelf.restaurants = restaurants
+
             let tabBarVC = LocatedTabBarController()
-            let restaurantTableVC = RestaurantTableViewController()
+            let restaurantTableVC = RestaurantTableViewController(restaurants: restaurants)
 
             tabBarVC.navigationDelegate = strongSelf
 
@@ -47,7 +50,7 @@ final class ExploreCoordinator: Coordinator {
 
     // MARK: - Network
 
-    private func getRestaurants(longitude: Double, latitude: Double, completion: @escaping () -> Void) {
+    private func getRestaurants(longitude: Double, latitude: Double, completion: @escaping ([Restaurant]) -> Void) {
         Network.shared.restaurantService.storeSearch(longitude: longitude, latitude: latitude, completion: completion)
     }
 }

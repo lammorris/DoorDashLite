@@ -32,7 +32,23 @@ extension DoorDash.Restaurants_v1 {
             }
 
             let task = Network.shared.session.dataTask(with: url) { (data, response, error) in
-                queue.async { completion([]) }
+                guard
+                    let data = data,
+                    let response = response as? HTTPURLResponse,
+                    endpoint.validStatusCodes.contains(response.statusCode)
+                else {
+                    assertionFailure("Store search error: \(error?.localizedDescription ?? "Unknown")")
+                    queue.async { completion([]) }
+                    return
+                }
+
+                guard let restaurants = try? Network.shared.decoder.decode([Restaurant].self, from: data) else {
+                    // TODO: Proper error handling
+                    assertionFailure("Error decoding JSON.")
+                    return
+                }
+
+                queue.async { completion(restaurants) }
             }
 
             task.resume()

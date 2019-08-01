@@ -55,5 +55,6 @@ final class MapViewController: BaseViewController<MapView> {
 extension MapViewController: ExploreCoordinatorDelegate {
     func exploreCoordinatorDidComplete(_ coordinator: ExploreCoordinator) {
         navigationController?.popToRootViewController(animated: true)
+        self.coordinator = nil
     }
 }
