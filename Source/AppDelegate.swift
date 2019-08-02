@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UINavigationBar.appearance().backgroundColor = .white
         UINavigationBar.appearance().tintColor = UIColor.doorDashRed
+        UINavigationBar.appearance().isTranslucent = false
 
         UITabBar.appearance().tintColor = UIColor.doorDashRed
 
