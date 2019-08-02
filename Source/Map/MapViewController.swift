@@ -113,7 +113,7 @@ extension MapViewController: CLLocationManagerDelegate {
         getPlaceMark(location: location) { [weak self] in
             guard let strongSelf = self else { return }
 
-            strongSelf.rootView.update(region: region, placemark: $0)
+            strongSelf.rootView.update(region: region, placemark: $0, shouldAnnotate: false)
         }
     }
 }
@@ -126,7 +126,7 @@ extension MapViewController: MapViewDelegate {
         getPlaceMark(location: newLocation) { [weak self] in
             guard let strongSelf = self else { return }
 
-            strongSelf.rootView.update(placemark: $0)
+            strongSelf.rootView.update(placemark: $0, shouldAnnotate: true)
         }
     }
 }

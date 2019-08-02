@@ -106,12 +106,14 @@ final class MapView: BaseView {
 
     // MARK: - Methods
 
-    func update(region: MKCoordinateRegion? = nil, placemark: CLPlacemark) {
+    func update(region: MKCoordinateRegion? = nil, placemark: CLPlacemark, shouldAnnotate: Bool) {
         if let region = region {
             map.setRegion(region, animated: true)
 
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = region.center
+            if shouldAnnotate {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = region.center
+            }
         }
 
         addressLabel.text = [placemark.subThoroughfare, placemark.thoroughfare, placemark.locality].compactMap({ $0 }).joined(separator: " ")
