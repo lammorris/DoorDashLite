@@ -9,6 +9,10 @@
 import UIKit
 import MapKit
 
+protocol MapViewDelegate: AnyObject {
+    func mapView(_ view: MapView, centerDidChange coordinate: CLLocationCoordinate2D)
+}
+
 final class MapView: BaseView {
 
     private struct Layout {
@@ -22,6 +26,8 @@ final class MapView: BaseView {
     private let infoStack: UIStackView
 
     let confirmationButton: UIButton
+
+    weak var delegate: MapViewDelegate?
 
     // MARK: - Initialization
 
@@ -58,6 +64,8 @@ final class MapView: BaseView {
         }()
 
         super.init(frame: frame)
+
+        map.delegate = self
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -98,8 +106,27 @@ final class MapView: BaseView {
 
     // MARK: - Methods
 
-    func update(region: MKCoordinateRegion, placemark: CLPlacemark) {
-        map.setRegion(region, animated: true)
+    func update(region: MKCoordinateRegion? = nil, placemark: CLPlacemark) {
+        if let region = region {
+            map.setRegion(region, animated: true)
+
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = region.center
+        }
+
         addressLabel.text = [placemark.subThoroughfare, placemark.thoroughfare, placemark.locality].compactMap({ $0 }).joined(separator: " ")
+    }
+}
+
+extension MapView: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        mapView.removeAnnotations(mapView.annotations)
+
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = mapView.region.center
+
+        delegate?.mapView(self, centerDidChange: mapView.region.center)
+
+        mapView.addAnnotation(annotation)
     }
 }
