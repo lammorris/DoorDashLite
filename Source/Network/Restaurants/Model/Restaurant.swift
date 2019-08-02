@@ -23,6 +23,5 @@ struct Restaurant: Codable {
         case deliveryTime = "asap_time"
         case description
         case id
-
     }
 }
